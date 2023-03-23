@@ -6,7 +6,6 @@ import {
     SearchIcon,
     MenuIcon,
     UserCircleIcon,
-    UsersIcon,
     GlobeAltIcon,
  } from '@heroicons/react/solid'
 
