@@ -9,9 +9,9 @@ function Search() {
     const { location, startDate, endDate, noOfGuests} = router.query //ES6 Destructuring
 
     //Date Processing
-    const formattedStartDate = format(new Date(startDate), "dd MMMM yy")
-    const formattedEndDate = format(new Date(startDate), "dd MMMM yy")
-    const range = `${formattedStartDate} to ${formattedEndDate}`
+    //const formattedStartDate = format(new Date(startDate), "dd MMMM yy")
+    //const formattedEndDate = format(new Date(startDate), "dd MMMM yy")
+    //const range = `${formattedStartDate} to ${formattedEndDate}`
 
     console.log(location)
 
@@ -21,7 +21,7 @@ function Search() {
         
         <main className="flex end border-2 border-blue-500">
             <section className="border-2 border-green-500">
-                <p className="text-xs ml-4 mt-[25px] font-semibold text-slate-500">300+ Stays - {range} - for {noOfGuests} guests</p>
+                {/* <p className="text-xs ml-4 mt-[25px] font-semibold text-slate-500">300+ Stays - {range} - for {noOfGuests} guests</p> */}
                 <h1 className="text-3xl font-semibold mt-2 mb-6 ml-4">Stays in {location}</h1>
 
                 <div className="hidden sm:flex gap-6 flex-grow ml-3 lg:ml-6 min-width-[300px] border-2 border-red-500">
