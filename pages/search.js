@@ -9,13 +9,13 @@ import Map from '../components/Map'
 
 function Search() {
     const router = useRouter()
-    const { location, startDate, endDate, noOfGuests} = router.query //ES6 Destructuring
-    startDate = Date.now()
-    endDate = Date.now()
+    let { location, startDate, endDate, noOfGuests} = router.query //ES6 Destructuring
+    startDate? startDate : Date.now()
+    endDate? endDate : Date.now()
 
     //Date Processing
     const formattedStartDate = format(new Date(startDate), "MMMM dd yyyy")
-    const formattedEndDate = format(new Date(startDate), "MMMM dd yyyy")
+    const formattedEndDate = format(new Date(endDate), "MMMM dd yyyy")
     const range = `${formattedStartDate} to ${formattedEndDate}`
 
     console.log(location)
