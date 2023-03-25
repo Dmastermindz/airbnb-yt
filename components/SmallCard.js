@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import { Header } from '../components/Header'
 
 function SmallCard({img, location, distance}) {
   return (

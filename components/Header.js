@@ -16,14 +16,14 @@ import {
     UsersIcon,
  } from '@heroicons/react/solid'
 
-function Header({placeholder}) {
+ export function Header({placeholder}) {
     //Next Router Init
     const router = useRouter()
 
-    //React State Initializations
+    //React State Initialization
     const [searchInput, setSearchInput] = React.useState('') //Search Bar Values
     console.log(searchInput)
-
+    
     const [startDate, setStartDate] = React.useState(new Date()) //Start Date for Calendar
     const [endDate, setEndDate] = React.useState(new Date()) //End Date for Calendar
 
@@ -53,6 +53,7 @@ function Header({placeholder}) {
         })
         setSearchInput('')
     }
+
 
     const selectionRange = {
         startDate: startDate,
@@ -84,7 +85,7 @@ function Header({placeholder}) {
         {/* RIght */}
         <div className="flex items-center justify-end space-x-4 text-gray-500">
             <p className="hidden md:inline-flex truncate">Become a host</p>
-            <GlobeAltIcon className="h-6 hover:shadow-lg active:scale-[0.9] transform transition duration-200 cursor-pointer" />
+            <GlobeAltIcon className="h-6 hidden md:inline-flex hover:shadow-lg active:scale-[0.9] transform transition duration-200 cursor-pointer" />
 
             <div className="flex items-center space-x-2 border-2 p-2 rounded-full hover:shadow-lg active:scale-[0.9] transform transition duration-200 cursor-pointer">
                 <MenuIcon className="h-6" />
@@ -121,3 +122,4 @@ function Header({placeholder}) {
 }
 
 export default Header
+
