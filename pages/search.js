@@ -14,8 +14,8 @@ function Search() {
     endDate? endDate : Date.now()
 
     //Date Processing
-    const formattedStartDate = format(new Date(startDate), "MMMM dd yyyy")
-    const formattedEndDate = format(new Date(endDate), "MMMM dd yyyy")
+    const formattedStartDate = startDate ? format(new Date(startDate), "MMMM dd yyyy") :""
+    const formattedEndDate = startDate ?  format(new Date(endDate), "MMMM dd yyyy") : ""
     const range = `${formattedStartDate} to ${formattedEndDate}`
 
     console.log(location)
