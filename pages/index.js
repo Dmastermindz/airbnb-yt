@@ -6,6 +6,7 @@ import SmallCard from "../components/SmallCard"
 import MediumCard from '@/components/MediumCard'
 import LargeCard from '../components/LargeCard'
 import Footer from '../components/Footer'
+import Map from '../components/Map'
 
 
 export default function Home({ exploreData, cardsData }) {
@@ -19,7 +20,7 @@ export default function Home({ exploreData, cardsData }) {
       </Head>
       
       {/* Header */}
-      <Header />
+      <Header placeholder="Search Homes" />
 
       {/* Banner */}
       <Banner />
@@ -62,10 +63,8 @@ export default function Home({ exploreData, cardsData }) {
         />
 
       </main>
-      
-      <Footer >
 
-      </Footer>
+      <Footer />
       
     </div>
   )

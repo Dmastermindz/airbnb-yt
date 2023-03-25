@@ -16,7 +16,7 @@ import {
     UsersIcon,
  } from '@heroicons/react/solid'
 
-function Header() {
+function Header({placeholder}) {
     //Next Router Init
     const router = useRouter()
 
@@ -49,7 +49,9 @@ function Header() {
                 endDate: endDate.toISOString(),
                 noOfGuests: numberOfGuests,
             }
+            
         })
+        setSearchInput('')
     }
 
     const selectionRange = {
@@ -74,7 +76,7 @@ function Header() {
 
         {/* Middle */}
         <div className="flex items-center md:border-2 rounded-full py-2 md:shadow-lg">
-            <input onChange={(e) => setSearchInput(e.target.value)} value={searchInput} className="flex-grow pl-5 bg-transparent outline-none text-sm text-gray-600 placeholder-gray-400" type="text" placeholder="Start Your Search" />
+            <input onChange={(e) => setSearchInput(e.target.value)} value={searchInput} className="flex-grow pl-5 bg-transparent outline-none text-sm text-gray-600 placeholder-gray-400" type="text" placeholder={placeholder} />
             <SearchIcon className="hidden md:inline-flex h-8 bg-red-400 text-white rounded-full p-2 cursor-pointer md:mx-2"/>
             
         </div>
