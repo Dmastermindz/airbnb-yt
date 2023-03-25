@@ -14,9 +14,9 @@ function Map() {
   return (
     <ReactMapGL
     initialViewState={{
-        longitude: -100,
-        latitude: 40,
-        zoom:8,
+        longitude: 0.1276,
+        latitude: 51.5072,
+        zoom:4.4,
       }}
     style={{width: '100%', height: '100%'}}
     mapStyle="mapbox://styles/dmastermind/clfn80l9800d201qiaud2dayd"
